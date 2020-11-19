@@ -1,7 +1,7 @@
 个人站点尝试 2020-11-18
 -----------------------
 
-在自己注册的 Vultr 服务器上::
+在自己注册的 Vultr 服务器 (CentOS 8.0 ) 上::
 
    git clone https://github.com/discourse/discourse_docker.git /var/discourse
    cd /var/discourse
@@ -40,7 +40,26 @@
 用 telnet , 可以连接到 mailjet 的邮件服务器.
 
 在 DNS 上添加 TXT 记录以信任域名仍无效. 根据参考资料修改 TLS 为 ``false``, 仍无法发送邮件.
-可能的问题在于 mailjet 无法设置单独子域名的 trust, 只能是 ``any@minyez.xyz``.
 
-准备换 SendGrid 作为邮件服务器再测试.
+在 mailjet 上新增子域名 ``@discourse.minyez.xyz``, 并在 DNSPod 上添加相应的 SPF/DKIM 认证.
+执行 rebuild, 仍然不行.
+
+换了一个 ubuntu 的 vultr VPS.
+
+安装 Docker 时遇到错误 ``E: Package 'docker-ce' has no installation candidate``, 解决方案在 `SO <https://askubuntu.com/a/1082945>` 上::
+
+   apt install apt-transport-https ca-certificates curl software-properties-common
+   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+   add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic test"
+   apt update
+   apt upgrade
+
+这个问题下有人说要把 bionic 换成 disco. 这里 bionic 在 20.10 中也是可以的. 然后跟上面 CentOS 一样安装::
+
+   apt-get docker-ce docker-ce-cli containerd.io
+
+在 setup 后, pku 邮箱成功收到注册邮件! 先前出问题的可能是
+
+1. CentOS 本身的问题
+2. Discourse 与原 VPS 上的 SSR 存在一些端口冲突
 

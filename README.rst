@@ -68,7 +68,7 @@ discourse 官方
 
 * `记录一下部署Discourse论坛的过程 <https://www.orgleaf.com/3098.html>`_
 * `开源论坛之discourse搭建 <https://www.imooc.com/article/282588/>`_
-* `如何在 Ubuntu Linux 16.04上安装开源的 Discourse 论坛 https://www.imooc.com/article/268043>`_
+* `如何在 Ubuntu Linux 16.04上安装开源的 Discourse 论坛 <https://www.imooc.com/article/268043>`_
 * `discourse 网站搭建 <https://www.cnblogs.com/macrored/p/13173340.html>`_
 * `用全站 CDN 部署 Discourse 论坛 <https://www.cnblogs.com/nebulagraph/p/12660335.html>`_
 

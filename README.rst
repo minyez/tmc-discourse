@@ -7,8 +7,8 @@ What is this repo for?
 Target
 ======
 
-当前的目标是基于 `Discourse <https://www.discourse.org/>` 应用的 Docker 容器,
-搭建 `CCME-TMC <http://www.chem.pku.edu.cn/jianghgroup/>` 的公共讨论平台,
+当前的目标是基于 `Discourse <https://www.discourse.org/>`_ 应用的 Docker 容器,
+搭建 `CCME-TMC <http://www.chem.pku.edu.cn/jianghgroup/>`_ 的公共讨论平台,
 便于知识分享和问题探讨.
 
 Ideas
@@ -57,14 +57,39 @@ Why not WeChat group?
 Resources
 =========
 
-* Docker 官方配置方案: https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md
-* 国内资源
-  * <记录一下部署Discourse论坛的过程>: https://www.orgleaf.com/3098.html
-  * <开源论坛之discourse搭建>: https://www.imooc.com/article/282588/
-  * <如何在 Ubuntu Linux 16.04上安装开源的 Discourse 论坛>: https://www.imooc.com/article/268043
+discourse 官方
+--------------
+
+* `Docker 官方配置方案 <https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md>`_
+* `官方论坛邮箱服务器配置 <https://meta.discourse.org/t/troubleshooting-email-on-a-new-discourse-install/16326/2>`_
+
+国内资源
+--------
+
+* `记录一下部署Discourse论坛的过程 <https://www.orgleaf.com/3098.html>`_
+* `开源论坛之discourse搭建 <https://www.imooc.com/article/282588/>`_
+* `如何在 Ubuntu Linux 16.04上安装开源的 Discourse 论坛 https://www.imooc.com/article/268043>`_
+* `discourse 网站搭建 <https://www.cnblogs.com/macrored/p/13173340.html>`_
+* `用全站 CDN 部署 Discourse 论坛 <https://www.cnblogs.com/nebulagraph/p/12660335.html>`_
+
+邮箱设置
+--------
+
+* `Sending an email using telnet <https://storymode7.wordpress.com/2019/05/29/sending-a-mail-using-telnet>`_
 
 Miscs
 =====
 
 一点个人私心: 利用这样的机会, 学习一下论坛的搭建, 为以后自己的研究工作做准备.
 
+Troubleshooting
+================
+
+Mail:
+
+* `No mail send with a Mailjet config on VPS <https://meta.discourse.org/t/no-mail-send-with-a-mailjet-config-on-vps/35875/4>`_
+
+  总结: 修改 ``config/app.yml``, 关闭 TLS, 
+
+* `Mailjet not sending mail <https://meta.discourse.org/t/mailjet-not-sending-mail/73629>`_
+* `Troubleshooting email on a new Discourse install <https://meta.discourse.org/t/troubleshooting-email-on-a-new-discourse-install/16326>`_

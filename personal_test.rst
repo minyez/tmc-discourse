@@ -56,10 +56,13 @@
 
 这个问题下有人说要把 bionic 换成 disco. 这里 bionic 在 20.10 中也是可以的. 然后跟上面 CentOS 一样安装::
 
-   apt-get docker-ce docker-ce-cli containerd.io
+   apt-get install docker-ce docker-ce-cli containerd.io
 
-在 setup 后, pku 邮箱成功收到注册邮件! 先前出问题的可能是
+在 setup 后登录网站, 注册, pku 邮箱成功收到注册邮件! 先前出问题的可能是
 
 1. CentOS 本身的问题
 2. Discourse 与原 VPS 上的 SSR 存在一些端口冲突
 
+追记: 直接拷贝 app.yml 到组内服务器, 然后 rebuild, 无法重现成功的安装 T_T 准备用 setup 重试一下.
+
+端口转发暂时不会弄. 花 70 买了一个腾讯云的服务器, 用一个月看看效果.

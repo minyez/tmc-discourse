@@ -23,6 +23,7 @@ CSS定制
 可能有用的插件:
 
 * 数学插件 `Math Plugin <https://meta.discourse.org/t/discourse-math-plugin/65770>`_ (支持 MathJax 和 KaTeX)
+* 清单列表 `Checklist <https://github.com/discourse/discourse-checklist>`_
 
 定制组件
 --------

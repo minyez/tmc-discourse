@@ -33,3 +33,15 @@ CSS定制
 * `Kanban theme <https://theme-creator.discourse.org/theme/david/kanban>`_
 * `Category Banners <https://meta.discourse.org/t/discourse-category-banners/86241>`_
 * `Disco TOC - automatic table of contents <https://meta.discourse.org/t/discourse-category-banners/86241>`_
+
+页脚文字
+--------
+自定义页脚需要在主题中设置. 以向 default 主题添加备案号为例, 编辑 CSS/HTML, 通用-页脚, 插入下列代码
+
+   <div style="text-align: center; color: #999; font-size: 90%; padding: 2em 0;">
+     Copyright &copy; 2021 CCME-TMC. <a href="https://beian.miit.gov.cn/">苏ICP备2021043781号-1</a>
+   </div>
+
+此外, 默认不在登录页面显示页脚内容, 因此当论坛为私有时, 外部审查无法看到页脚备案号.
+要在登录页面上显示页脚, 可添加主题组件 `Easy responsive footer <https://github.com/discourse/Discourse-easy-footer>`_.
+在设置中删去所有无关内容, 仅打开 Show footer on login required page 开关即可. 退出登录检查是否显示页脚.

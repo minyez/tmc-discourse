@@ -1,0 +1,28 @@
+diff --git a/image/base/Dockerfile b/image/base/Dockerfile
+index 9b00ff6..7a52924 100644
+--- a/image/base/Dockerfile
++++ b/image/base/Dockerfile
+@@ -80,7 +80,8 @@ RUN gem update --system
+ 
+ RUN gem install bundler --force &&\
+     rm -rf /usr/local/share/ri/2.7.2/system &&\
+-    cd / && git clone https://github.com/discourse/pups.git
++    cd / && git clone https://gitee.com/mirrors_discourse/pups.git
++#    cd / && git clone https://github.com/discourse/pups.git
+ 
+ ADD install-redis /tmp/install-redis
+ RUN /tmp/install-redis
+@@ -128,11 +129,12 @@ ADD cron /etc/service/cron/run
+ ADD rsyslog /etc/service/rsyslog/run
+ ADD cron.d_anacron /etc/cron.d/anacron
+ 
++#git clone --depth 1 https://github.com/discourse/discourse.git &&\
+ # Discourse specific bits
+ RUN useradd discourse -s /bin/bash -m -U &&\
+     mkdir -p /var/www &&\
+     cd /var/www &&\
+-    git clone --depth 1 https://github.com/discourse/discourse.git &&\
++    git clone --depth 1 https://gitee.com/bobby285271/discourse.git &&\
+     cd discourse &&\
+     git remote set-branches --add origin tests-passed &&\
+     chown -R discourse:discourse /var/www/discourse &&\
